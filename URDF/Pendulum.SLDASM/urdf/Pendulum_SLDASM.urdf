@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Pendulum.SLDASM">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="3.556E-19 -0.012369 -0.0049459"
+        rpy="0 0 0" />
+      <mass
+        value="0.012955" />
+      <inertia
+        ixx="8.0476E-07"
+        ixy="-5.2465E-23"
+        ixz="7.5699E-23"
+        iyy="7.8139E-07"
+        iyz="-8.3906E-09"
+        izz="4.9029E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Pendulum.SLDASM/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Pendulum.SLDASM/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="1_Link">
+    <inertial>
+      <origin
+        xyz="0.050589 0 0.0025"
+        rpy="0 0 0" />
+      <mass
+        value="0.014391" />
+      <inertia
+        ixx="1.4894E-07"
+        ixy="0"
+        ixz="0"
+        iyy="1.3733E-05"
+        iyz="0"
+        izz="1.3822E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Pendulum.SLDASM/meshes/1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Pendulum.SLDASM/meshes/1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1_Joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0.0017782 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="1_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
